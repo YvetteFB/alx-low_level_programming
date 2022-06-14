@@ -1,33 +1,44 @@
 #include "main.h"
 
+int tmp_prime(int n, int i);
+
 /**
- * _sqrt_recursion - return the natural square root of a number
- * @n: int number
- * Return: If no natural square root, return -1. Else return natural
- * square root
+ * divisors - number is prime?
+ * @n: integer params
+ * @m: integer params
+ * Return: boolean
  */
 
-int _sqrt_recursion(int n)
+int divisors(int n, int m)
 {
-	return (halp(n, 1));
+	if (m % n == 0)
+	{
+		return (0);
+	}
+	else if (m / 2 > n)
+	{
+		return (divisors(n + 2, m));
+	}
+	else
+	{
+		return (1);
+	}
 }
 
 /**
- * halp - helper function to solve _sqrt_recursion
- * @c: number to determine if square root
- * @i: incrementer to compare against `c`
- * Return: square root if natural square root, or -1 if none found
+ * is_prime_number - prime
+ * @n: integer params
+ * Return: recursion
  */
 
-int halp(int c, int i)
+int is_prime_number(int n)
 {
-	int square;
-
-	square = i * i;
-	if (square == c)
-		return (i);
-	else if (square < c)
-		return (halp(c, i + 1));
+	if ((!(n % 2) && n != 2) || n < 2)
+	{
+		return (0);
+	}
 	else
-		return (-1);
+	{
+		return (divisors(3, n));
+	}
 }
