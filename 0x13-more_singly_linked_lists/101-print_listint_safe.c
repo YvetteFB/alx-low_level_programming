@@ -1,38 +1,36 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_listint_safe - Print a `listint_t` linked list including mem addresses
+ * @head: head of linked list
+ * Description: Go through the list only once.
+ * Return: number of nodes in list. If fails, exit with status 98.
  */
-int main(void)
+size_t print_listint_safe(const listint_t *head)
 {
-    listint_t *head;
-    listint_t *head2;
-    listint_t *node;
+	const listint_t *current;
+	size_t count;
+	const listint_t *hold;
 
-    head2 = NULL;
-    add_nodeint(&head2, 0);
-    add_nodeint(&head2, 1);
-    add_nodeint(&head2, 2);
-    add_nodeint(&head2, 3);
-    add_nodeint(&head2, 4);
-    add_nodeint(&head2, 98);
-    add_nodeint(&head2, 402);
-    add_nodeint(&head2, 1024);
-    print_listint_safe(head2);
-    head = NULL;
-    node = add_nodeint(&head, 0);
-    add_nodeint(&head, 1);
-    add_nodeint(&head, 2);
-    add_nodeint(&head, 3);
-    add_nodeint(&head, 4);
-    node->next = add_nodeint(&head, 98);
-    add_nodeint(&head, 402);
-    add_nodeint(&head, 1024);
-    print_listint_safe(head);
-    return (0);
+	current = head;
+	if (current == NULL)
+		exit(98);
+
+	count = 0;
+	while (current != NULL)
+	{
+		hold = current;
+		current = current->next;
+		count++;
+		printf("[%p] %d\n", (void *)hold, hold->n);
+
+		if (hold < current)
+		{
+			printf("-> [%p] %d\n", (void *)current, current->n);
+			break;
+		}
+	}
+
+	return (count);
 }
