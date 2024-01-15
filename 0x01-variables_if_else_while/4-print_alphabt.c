@@ -10,7 +10,6 @@ int main(void)
 char currentLetter = 'a';
 while (currentLetter <= 'z')
 {
-
 putchar(currentLetter);
 currentLetter++;
 }
