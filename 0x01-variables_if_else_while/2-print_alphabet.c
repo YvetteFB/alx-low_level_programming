@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+* main - Entry point
+*
+* Return: returns 1
+*/
 int main() {
     char currentLetter = 'a';
 
@@ -8,8 +13,6 @@ int main() {
         putchar(currentLetter);
         currentLetter++;
     }
-
-    putchar('\n');  // Print a newline character after the alphabet
 
     return 0;
 }
