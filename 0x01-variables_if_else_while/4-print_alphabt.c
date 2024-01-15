@@ -7,13 +7,12 @@
 */
 int main(void)
 {
-char currentLetter = 'a';
-while (currentLetter <= 'z')
+for (currentLetter = 'a'; currentLetter <= 'z'; currentLetter++)
 {
+if (currentLetter == 'q' || currentLetter == 'e')
+			continue;
 putchar(currentLetter);
-currentLetter++;
 }
-
 putchar('\n');
 return (0);
 }
