@@ -5,14 +5,15 @@
 *
 * Return: returns 1
 */
-int main() {
-    char currentLetter = 'a';
+int main(void)
+{
+char currentLetter = 'a';
 
-    while (currentLetter <= 'z')
-    {
-        putchar(currentLetter);
-        currentLetter++;
-    }
-    putchar('\n');  
-    return 0;
+while (currentLetter <= 'z')
+{
+    putchar(currentLetter);
+    currentLetter++;
+}
+putchar('\n');  
+return 0;
 }
