@@ -8,7 +8,7 @@
 int main(void)
 {
 char currentLetter = 'a';
-if (currentLetter <= 'z' || currentLetter != 'e' || currentLetter != 'q')
+while (currentLetter <= 'z' || currentLetter != 'e' || currentLetter != 'q')
 {
 putchar(currentLetter);
 currentLetter++;
