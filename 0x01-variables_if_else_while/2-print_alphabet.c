@@ -8,12 +8,11 @@
 int main(void)
 {
 char currentLetter = 'a';
-
 while (currentLetter <= 'z')
 {
-    putchar(currentLetter);
-    currentLetter++;
+putchar(currentLetter);
+currentLetter++;
 }
-putchar('\n');  
-return 0;
+putchar('\n');
+return (0);
 }
