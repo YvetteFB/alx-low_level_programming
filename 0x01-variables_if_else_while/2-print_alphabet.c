@@ -13,6 +13,6 @@ int main() {
         putchar(currentLetter);
         currentLetter++;
     }
-
+    putchar('\n');  
     return 0;
 }
