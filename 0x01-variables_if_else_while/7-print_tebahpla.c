@@ -11,7 +11,7 @@ char currentLetter = 'z';
 while (currentLetter >= 'a')
 {
 putchar(currentLetter);
-currentLetter++;
+currentLetter--;
 }
 putchar('\n');
 return (0);
