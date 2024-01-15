@@ -11,7 +11,7 @@ char currentLetter;
 for (currentLetter = 'a'; currentLetter <= 'z'; currentLetter++)
 {
 if (currentLetter == 'q' || currentLetter == 'e')
-			continue;
+continue;
 putchar(currentLetter);
 }
 putchar('\n');
