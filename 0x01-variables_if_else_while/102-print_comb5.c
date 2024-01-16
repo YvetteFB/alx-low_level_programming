@@ -20,7 +20,7 @@ for (k = 0; k <= 9; k++)
 {
 for (n = k + 1; n <= 9; n++)
 {
-if (i < j)
+if (i <= j)
 {
 putchar(i + '0');
 putchar(j + '0');
