@@ -26,10 +26,12 @@ putchar(i + '0');
 putchar(j + '0');
 }
 
+putchar(' ');
+
 if (k < n)
 {
-putchar(i + '0');
-putchar(j + '0');
+putchar(k + '0');
+putchar(n + '0');
 }
 
 if (!(i == 8 && j == 9))
